@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  radio: MyString
+  note: MyString
+  dishes: false
+
+two:
+  radio: MyString
+  note: MyString
+  dishes: false
