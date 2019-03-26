@@ -8,15 +8,84 @@
 #game {
   background: url('./myroom.gif') no-repeat;
   background-size: 100% 100%;
-  height: 200px;
+  height: 300px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 400px;
+  width: 100%;
 }
 
-#start {
+#overlay {
+  position: relative; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#text{
+    font-family: 'Shockwave Brush' ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+#ThePanel {
+    position:  relative;
+    overflow: hidden;
+    padding-left: 39vw;
+    padding-right: 39vw;
+    width: 400px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+.content {
+    font-family: MonoSpatial;
+    position: relative;
+    left: -135px;
+    visibility: hidden;
+    width: 200px;
+    height: 100px;
+    transition: 1s;
+}
+
+/* inside panel is the class to use when we want to add anything under the 'game' */
+.insidePanel {
+    font-family: MonoSpatial;
+    position: relative;
+    top: -135px;
+    visibility: hidden;
+    width: 200px;
+    height: 100px;
+    transition: 1s;
+}
+
+#ThePanel:hover .insidePanel {
+    transition: 1s;
+    visibility: visible;
+    top: 0;
+}
+
+#ThePanel:hover .content {
+    transition: 1s;
+    visibility: visible;
+    left: 0;
+}
+
+/* #start {
   color: white;
   font-size: 4rem;
   position: relative;
@@ -53,4 +122,4 @@
   left: 0;
   position: absolute;
   width: 9px;
-}
+} */

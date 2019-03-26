@@ -1,5 +1,5 @@
 // Your code here
-
+const thePanelTag = document.querySelector('#ThePanel')
 const dodger = document.querySelector('#dodger')
 let style = window.getComputedStyle(dodger)
 
@@ -11,88 +11,114 @@ const tvSprite = `-130px -280px`
 const bookSprite = [`-2px -544px`, `-66px -548px`, `-130px -556px`, `-194px -556px`]
 let index = 0
 
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+on();
+
+
 document.addEventListener('keydown', function(e) {
-  e.preventDefault()
-  console.log(e.which)
-  standDodger()
-  if (e.which == 37) {
-    moveDodgerLeft()
-  }
-  else if (e.which == 39) {
-    moveDodgerRight()
-  }
-  else if (e.which == 40) {
-    lookForward()
-  }
-  else if (e.which == 38) {
-    lookBehind()
-  }
+    e.preventDefault()
+
+    off();
+    console.log(e.which)
+
+    standDodger()
+    if (e.which == 37) {
+        moveDodgerLeft()
+    } else if (e.which == 39) {
+        moveDodgerRight()
+    } else if (e.which == 40) {
+        lookForward()
+    } else if (e.which == 38) {
+        lookBehind()
+    }
 })
 
 function moveDodgerLeft() {
-  let leftNumbers = dodger.style.left.replace('px', '')
-  let left = parseInt(leftNumbers, 10)
-  let rightNumbers = dodger.style.right.replace('px', '')
-  let right = parseInt(rightNumbers, 10)
+    let leftNumbers = dodger.style.left.replace('px', '')
+    let left = parseInt(leftNumbers, 10)
+    let rightNumbers = dodger.style.right.replace('px', '')
+    let right = parseInt(rightNumbers, 10)
 
-  if (left > 0) {
-  dodger.style.left = `${left - 10}px`
-  dodger.style.right = `${right + 10}px`
-  }
-  animateLeftDodger()
+    if (left > 0) {
+        dodger.style.left = `${left - 10}px`
+        dodger.style.right = `${right + 10}px`
+    }
+    animateLeftDodger()
 }
 
 function moveDodgerRight() {
-  let rightNumbers = dodger.style.right.replace('px', '')
-  let right = parseInt(rightNumbers, 10)
-  let leftNumbers = dodger.style.left.replace('px', '')
-  let left = parseInt(leftNumbers, 10)
+    let rightNumbers = dodger.style.right.replace('px', '')
+    let right = parseInt(rightNumbers, 10)
+    let leftNumbers = dodger.style.left.replace('px', '')
+    let left = parseInt(leftNumbers, 10)
 
-  if (right > 0) {
-    dodger.style.right = `${right - 10}px`
-    dodger.style.left = `${left + 10}px`
-  }
-  animateRightDodger()
+    if (right > 0) {
+        dodger.style.right = `${right - 10}px`
+        dodger.style.left = `${left + 10}px`
+    }
+    animateRightDodger()
 }
 
 function lookForward() {
-  dodger.style.backgroundPosition = forwardSprite;
+    dodger.style.backgroundPosition = forwardSprite;
 }
 
 function lookBehind() {
-  if (dodger.style.left == '40px') {
-    dodger.style.backgroundPosition = tvSprite;
-    dodger.style.height = '80px'
-  } else {
-  dodger.style.backgroundPosition = backSprite;
- }
+    if (dodger.style.left == '40px') {
+        dodger.style.backgroundPosition = tvSprite;
+        dodger.style.height = '80px'
+    } else {
+        dodger.style.backgroundPosition = backSprite;
+    }
 }
 
 function animateRightDodger() {
-  if (index < rightSprite.length) {
-    dodger.style.backgroundPosition = rightSprite[index];
-    index += 1;
-  } else {
-    index = 0;
-    dodger.style.backgroundPosition = rightSprite[index];
-    index += 1;
-  }
+    if (index < rightSprite.length) {
+        dodger.style.backgroundPosition = rightSprite[index];
+        index += 1;
+    } else {
+        index = 0;
+        dodger.style.backgroundPosition = rightSprite[index];
+        index += 1;
+    }
 }
 
 function animateLeftDodger() {
-  if (index < leftSprite.length) {
-    dodger.style.backgroundPosition = leftSprite[index];
-    index += 1;
-  } else {
-    index = 0;
-    dodger.style.backgroundPosition = leftSprite[index];
-    index += 1;
-  }
+    if (index < leftSprite.length) {
+        dodger.style.backgroundPosition = leftSprite[index];
+        index += 1;
+    } else {
+        index = 0;
+        dodger.style.backgroundPosition = leftSprite[index];
+        index += 1;
+    }
 }
 
 function standDodger() {
-  dodger.style.height = `108px`;
+    dodger.style.height = `108px`;
 }
+
+
+function renderMission() {
+    return '<div class="insidePanel"> <h1>Who?</h1> <p class="content"> </p> </div>'
+}
+
+
+thePanelTag.innerHTML = renderMission();
+
+
+
+
+
+
+
 
 // function readDodger() {
 //   bookSprite.forEach(function(action){
