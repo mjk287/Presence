@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const roomObj = new Room(roomData)
 
     roomObj.renderRoom()
+    const tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    const scripts = document.getElementsByTagName('script')
+    const lastScriptTag = scripts[scripts.length - 1];
+    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag);
   })
 })
 

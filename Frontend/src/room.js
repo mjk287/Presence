@@ -10,8 +10,8 @@ class Room {
 
   renderRoom(){
     const mixtape = document.querySelector('#mixtape')
-    mixtape.src = this.radio
-    audioTag.load()
+    // mixtape.src = this.radio
+    // audioTag.load()
   }
 }
 

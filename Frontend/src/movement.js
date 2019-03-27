@@ -33,7 +33,7 @@ function moveDodgerLeft() {
   dodger.style.left = `${left - 10}px`
   dodger.style.right = `${right + 10}px`
   }
-  animateLeftDodger()
+  musicOn ? animateLeftDance() : animateLeftDodger()
 }
 
 function moveDodgerRight() {
@@ -44,11 +44,12 @@ function moveDodgerRight() {
   let leftNumbers = style.left.replace('px', '')
   let left = parseInt(leftNumbers, 10)
 
-  if (right > 0) {
+  if (right > 56) {
     dodger.style.right = `${right - 10}px`
     dodger.style.left = `${left + 10}px`
   }
-  animateRightDodger()
+  musicOn ? animateRightDance() : animateRightDodger()
+
 }
 
 function lookForward() {
@@ -68,6 +69,17 @@ function animateRightDodger() {
   }
 }
 
+function animateRightDance() {
+  if (index < 2) {
+    dodger.style.backgroundPosition = leftSprite[index];
+    index += 1;
+  } else {
+    index = 0;
+    dodger.style.backgroundPosition = leftSprite[index];
+    index += 1;
+  }
+}
+
 function animateLeftDodger() {
   if (index < leftSprite.length) {
     dodger.style.backgroundPosition = leftSprite[index];
@@ -75,6 +87,17 @@ function animateLeftDodger() {
   } else {
     index = 0;
     dodger.style.backgroundPosition = leftSprite[index];
+    index += 1;
+  }
+}
+
+function animateLeftDance() {
+  if (index < 2) {
+    dodger.style.backgroundPosition = rightSprite[index];
+    index += 1;
+  } else {
+    index = 0;
+    dodger.style.backgroundPosition = rightSprite[index];
     index += 1;
   }
 }

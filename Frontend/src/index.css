@@ -27,6 +27,10 @@ body {
 audio {
   display: none;
 }
+
+iframe {
+  display: none;
+}
 /* #start {
   color: white;
   font-size: 4rem;
