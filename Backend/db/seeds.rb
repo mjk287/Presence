@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Room.destroy_all
 
-Room.create(radio:'Test by Queen', note:'mama, I just killed a man', dishes:true)
+Room.create(radio:'src/assets/AcidGhost-AllAlone.mp3', note:'mama, I just killed a man', dishes:true)
 
 puts "Seeded"
