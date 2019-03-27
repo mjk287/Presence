@@ -4,8 +4,9 @@ let index = 0
 
 function addMovement() {
   document.addEventListener('keydown', function(e) {
-    e.preventDefault()
-    console.log(e.which)
+    if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
     standDodger()
     if (e.which == 37) {
       moveDodgerLeft()
