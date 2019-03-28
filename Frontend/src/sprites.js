@@ -1,5 +1,5 @@
 const dodger = document.querySelector('#dodger')
-const formTag = document.querySelector('.forms')
+const form1Tag = document.querySelector('.form1')
 
 const rightSprite = [`-1px -152px`, `-62px -152px`, `-126px -148px`, `-190px -152px`]
 const leftSprite = [`-2px -408px`, `-66px -408px`, `-130px -404px`, `-194px -408px`]

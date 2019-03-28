@@ -1,4 +1,4 @@
-formTag.addEventListener('submit', (e) => {
+form1Tag.addEventListener('submit', (e) => {
   e.preventDefault()
 
 
@@ -17,16 +17,16 @@ formTag.addEventListener('submit', (e) => {
 class Form {
 
   static renderMixtapeForm() {
-    return `<form id="mixtape-form" action="index.html" method="post">
-      <input type="text" name="songUrl">
+    return `<form class="insidePanel" id="mixtape-form" action="index.html" method="post">
+      <input type="text" name="songUrl" placeholder="A Youtube Url"><br>
       <input type="submit" value="Make Mixtape">
     </form>`
   }
 
   static renderNoteForm() {
-    return `<form id="note-form" action="index.html" method="post">
-      <textarea name="myNote">${Room.theRoom.note}</textarea>
-      <input type="submit" value="Write Note">
+    return `<form class="insidePanel" id="note-form" action="index.html" method="post">
+      <textarea name="myNote">${Room.theRoom.note}</textarea><br>
+      <input type="submit" id='note-button' value="Write Note">
     </form>`
   }
 }

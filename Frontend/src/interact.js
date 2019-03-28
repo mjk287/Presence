@@ -12,11 +12,15 @@ function addInteractivity(){
         // musicOn = !musicOn
         musicOn ? player.pauseVideo() : player.playVideo()
         musicOn = !musicOn
+        if (musicOn) {
+          dodger.className = 'music'
+          dodger.style.backgroundPosition = ''
+        }
 
-        formTag.innerHTML = Form.renderMixtapeForm()
+        form1Tag.innerHTML = Form.renderMixtapeForm()
       } else if (dodger.style.left === '40px') {
         lookBehind()
-        formTag.innerHTML = Form.renderNoteForm()
+        form1Tag.innerHTML = Form.renderNoteForm()
       } else {
         lookBehind()
       }
