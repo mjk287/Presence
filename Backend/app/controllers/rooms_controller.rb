@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.permit(:radio, :note, :dishes)
+    params.permit(:radio, :note, :dishes, :image)
   end
 
   def find_room
