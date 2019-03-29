@@ -21,6 +21,9 @@ function addInteractivity(){
       } else if (dodger.style.left === '40px') {
         lookBehind()
         form1Tag.innerHTML = Form.renderNoteForm()
+      } else if (dodger.style.left === '210px') {
+        lookBehind()
+        form1Tag.innerHTML = Form.renderImageForm()
       } else {
         lookBehind()
       }

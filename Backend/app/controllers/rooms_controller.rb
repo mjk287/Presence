@@ -6,7 +6,10 @@ class RoomsController < ApplicationController
   end
 
   def update
+    # @room.attach(room_params[:image])
+
     @room.update(room_params)
+    debugger
     if @room.save
       render json: @room, status: :accepted
     else
@@ -17,7 +20,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.permit(:radio, :note, :dishes, :image)
+    params.permit(:radio, :note, :dishes, :files)
   end
 
   def find_room

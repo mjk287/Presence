@@ -4,6 +4,7 @@ class Room {
     this.radio = radio
     this.note = note
     this.dishes = dishes
+    // this.files = files
 
     Room.theRoom = this
   }
