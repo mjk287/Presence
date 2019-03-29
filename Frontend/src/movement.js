@@ -42,10 +42,10 @@ function moveDodgerLeft() {
     let rightNumbers = style.right.replace('px', '')
     let right = parseInt(rightNumbers, 10)
 
-    // if (left > 0) {
+    if (left > -450) {
     dodger.style.left = `${left - 10}px`
     dodger.style.right = `${right + 10}px`
-    // }
+    }
     musicOn ? animateLeftDance() : animateLeftDodger()
 }
 
@@ -57,10 +57,10 @@ function moveDodgerRight() {
     let leftNumbers = style.left.replace('px', '')
     let left = parseInt(leftNumbers, 10)
 
-    // if (right > 56) {
+    if (right > 70) {
     dodger.style.right = `${right - 10}px`
     dodger.style.left = `${left + 10}px`
-    // }
+    }
     musicOn ? animateRightDance() : animateRightDodger()
 
 }

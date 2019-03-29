@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   Adaptor.getRoom().then((roomData) =>{
-    debugger
     const roomObj = new Room(roomData)
 
     roomObj.renderRoom()
