@@ -1,7 +1,8 @@
 body {
-  zoom: 300%;
+  zoom: 200%;
   width: 1000px;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 #dodger {
@@ -99,7 +100,7 @@ iframe {
 
 
 #text{
-  font-family: 'Shockwave Brush' ;
+  font-family: 'assets/ShockwaveBrush' ;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -153,7 +154,7 @@ iframe {
 
 /* inside panel is the class to use when we want to add anything under the 'game' */
 .insidePanel {
-    /* font-family: MonoSpatial; */
+    font-family: ShockwaveBrushRegular;
     position: relative;
     top: -135px;
     visibility: hidden;

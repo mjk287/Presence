@@ -2,23 +2,11 @@
 // const thePanelTag = document.querySelector('#ThePanel')
 let index = 0
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
-
-}
-
-function off() {
-    document.getElementById("overlay").style.display = "none";
-
-}
-
-on();
 
 function addMovement() {
     document.addEventListener('keydown', function(e) {
         if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
             e.preventDefault();
-            off()
         }
         // window.scrollTo(dodger.style.left, 0)
         dodger.className = ''
