@@ -19,6 +19,7 @@ function addMovement() {
         if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
             e.preventDefault();
             off()
+            dodger.scrollIntoView();
         }
         // window.scrollTo(dodger.style.left, 0)
         dodger.className = ''
@@ -43,8 +44,8 @@ function moveDodgerLeft() {
     let right = parseInt(rightNumbers, 10)
 
     if (left > -500) {
-    dodger.style.left = `${left - 10}px`
-    dodger.style.right = `${right + 10}px`
+        dodger.style.left = `${left - 10}px`
+        dodger.style.right = `${right + 10}px`
     }
     musicOn ? animateLeftDance() : animateLeftDodger()
 }
@@ -58,8 +59,8 @@ function moveDodgerRight() {
     let left = parseInt(leftNumbers, 10)
 
     if (right > 70) {
-    dodger.style.right = `${right - 10}px`
-    dodger.style.left = `${left + 10}px`
+        dodger.style.right = `${right - 10}px`
+        dodger.style.left = `${left + 10}px`
     }
     musicOn ? animateRightDance() : animateRightDodger()
 
