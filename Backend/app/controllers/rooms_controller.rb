@@ -7,9 +7,7 @@ class RoomsController < ApplicationController
 
   def update
     # @room.attach(room_params[:image])
-
     @room.update(room_params)
-    debugger
     if @room.save
       render json: @room, status: :accepted
     else

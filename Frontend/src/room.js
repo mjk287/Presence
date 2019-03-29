@@ -1,10 +1,10 @@
 class Room {
-  constructor({id, radio, note, dishes}) {
+  constructor({id, radio, note, dishes, image}) {
     this.id = id
     this.radio = radio
     this.note = note
     this.dishes = dishes
-    // this.files = files
+    this.image = image
 
     Room.theRoom = this
   }
