@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const scripts = document.getElementsByTagName('script')
     const lastScriptTag = scripts[scripts.length - 1];
     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag);
+
+
   })
+
 })
 
 addMovement()

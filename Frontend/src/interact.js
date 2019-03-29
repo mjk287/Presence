@@ -8,7 +8,7 @@ const bedroomTag = document.querySelector('#game')
 function addInteractivity(){
   document.addEventListener('keydown', (e) => {
     if (e.which == 38)
-      if (dodger.style.left === '150px') {
+      if (dodger.style.left === '150px' || dodger.style.left === '140px' || dodger.style.left === '160px') {
         lookBehind()
         // audioTag.paused ? audioTag.play() : audioTag.pause()
         // iframeTag.src = (musicOn ? iframeTag.src.replace(/.$/,"0") : iframeTag.src.replace(/.$/,"1"))
@@ -21,10 +21,10 @@ function addInteractivity(){
         }
 
         form1Tag.innerHTML = Form.renderMixtapeForm()
-      } else if (dodger.style.left === '40px') {
+      } else if (dodger.style.left === '40px' || dodger.style.left === '50px' || dodger.style.left === '30px') {
         lookBehind()
         form1Tag.innerHTML = Form.renderNoteForm()
-      } else if (dodger.style.left === '-450px') {
+      } else if (dodger.style.left === '-450px' || dodger.style.left === '-440px' || dodger.style.left === '-460px'){
         lookBehind()
         form1Tag.innerHTML = Form.renderImageForm()
       } else if (dodger.style.left === '-350px') {
