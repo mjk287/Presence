@@ -42,7 +42,7 @@ function moveDodgerLeft() {
     let rightNumbers = style.right.replace('px', '')
     let right = parseInt(rightNumbers, 10)
 
-    if (left > -450) {
+    if (left > -500) {
     dodger.style.left = `${left - 10}px`
     dodger.style.right = `${right + 10}px`
     }

@@ -24,10 +24,10 @@ function addInteractivity(){
       } else if (dodger.style.left === '40px') {
         lookBehind()
         form1Tag.innerHTML = Form.renderNoteForm()
-      } else if (dodger.style.left === '-400px') {
+      } else if (dodger.style.left === '-450px') {
         lookBehind()
         form1Tag.innerHTML = Form.renderImageForm()
-      } else if (dodger.style.left === '-310px') {
+      } else if (dodger.style.left === '-350px') {
         lookBehind()
         tvTime()
         if (tvOn) {

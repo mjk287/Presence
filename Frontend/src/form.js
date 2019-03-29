@@ -49,7 +49,7 @@ class Form {
   }
 
   static renderImageForm() {
-    return `<form class="insidePanel" id="image-form">
+    return `<form class="picturePanel" id="image-form">
       <input type="file" name="files"><br>
       <input type="submit" id='image-button' value="Place Picture"><br>
         <img src="http://localhost:3000/${Room.theRoom.image}" alt="" id="pictureFrame">
