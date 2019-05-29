@@ -4,7 +4,7 @@ Presence is a side scroller, artistic game where the user and their character ca
 
 ## Motivation
 
-Presence aims to illustrate the trace and residue we leave behind of ourselves in our environments. Therefore, it hopes a user will experience the "presence" of the previous occupant of the room by the changes they have made during their stay. In turn, it hopes that the user will leave behind a trace of themselves (preferably with personal, intimate content) for the next user to experience. These changes will be more explicated in the Features section of the ReadME.     
+Presence aims to illustrate the trace and residue we leave behind of ourselves in our environments. Therefore, it hopes a user will experience the "presence" of the previous occupant of the room by the changes they have made during their stay. In turn, it hopes that the user will leave behind a trace of themselves (preferably with personal, intimate content) for the next user to experience. These changes will be further explicated in the Features section of the ReadME.     
 
 ## Tech/framework used
 
@@ -18,23 +18,21 @@ Presence aims to illustrate the trace and residue we leave behind of ourselves i
 
 * Active Storage for image uploads
 * Youtube Iframe API for playing audio and songs
+* Photoshop to animate background ambience and idle character
 
 ## Features
 
-The application has the baseline, typical features of a social media application such as the ability to make text and image posts on your wall, comment on a post, and like a post. Aside from these, here are some of the unique features of this application:
+The application allows a user to take control of a sprite character, move from left to right between the kitchen and bedroom, and interact with objects in the room by pressing the up arrow key. Most of the interactions will consist of a form appearing and being able to change/post new content for the next user. These interactions will be listed below.
 
-1. When creating an account, a user will be assigned a random partner or pen pal, establishing the pair relationship.
+1. When directly in front of the post-it note on the fridge, a user can read the previous user's written message and change/edit the message for the next user as a form's textarea.
 
-2. When editing your profile, you can change your name, password, profile picture and your favorite song. How this favorite song will be used will be detailed below.
+2. Interacting with the radio will begin to play the previous user's uploaded song/mixtape. Allows the user to upload a new song in the form of a Youtube URL.
 
-3. On your newsfeed/homepage, when your partner is logged-in a variety of features will become available and queues will be triggered:
-    1. A warm amber light, imitating interior domestic lighting, will emit from the corner of the page, indicating their online presence.
-    2. The aforementioned favorite song of your partner will begin to play. Moreover, an IIR filter will be applied on the song that makes it sound muffled and diegetic, simulating music coming from another room or from your next door neighbor.
-    3. You can chat with your partner via realtime chatroom on the side of the page.
+3. Interacting with the picture frame will pull up the last user's uploaded photo. Allows the user to upload and store a new photo via Active Storage.
 
-4. There is a third type of post, aside from text and image, which is the voicemail post. A user will be able to record their voice, play the preview, and submit it to the backend. A filter as well as sound effects will dynamically manipulate the audio to sound like voicemail and capture the sentimentality attached to this old mode of messaging.  
+4. Interacting with the remote control will animate the sprite to hop onto the bed and start reading. The light from the TV screen will start to flicker over the bed.
 
-checkout the following for a video demo: https://www.youtube.com/watch?v=Wol44Ydzop8&feature=youtu.be
+checkout the following for a video demo: https://www.youtube.com/watch?v=mFRceA2HyIc&feature=youtu.be
 
 ## Getting Started
 
@@ -74,9 +72,8 @@ rails s
 cd frontend
 ```
 
-2. run npm install in your terminal and run the frontend server  
+2. run the frontend server via a simple ruby local http server  
 
 ```
-npm install
-npm start
+ruby -run -e httpd . -p 8000
 ```
